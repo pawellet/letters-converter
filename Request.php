@@ -17,4 +17,8 @@ class Request
         $this->post = $post;
         $this->method = $method;
     }
+    public function getParam(): ?array
+    {
+        return $this->get;
+    }
 }
