@@ -29,10 +29,11 @@ class ConverterController
         $this->view = new View();
         $this->converterModel = new ConverterModel();
     }
-    public function run()
+    public function run(): void
     {
         $action = $this->action() . 'Action';
-        print_r($action);
+
+        $this->view->render($action);
     }
     private function action(): string
     {
