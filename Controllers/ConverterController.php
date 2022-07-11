@@ -33,10 +33,14 @@ class ConverterController
     {
         $action = $this->action() . 'Action';
 
-        $this->view->render($action);
+        $this->$action();
     }
     private function action(): string
     {
         return $action = $this->request->getParam() ? $this->request->getParam() : self::DEFAULT_ACTION;
+    }
+    private function homeAction(): void
+    {
+        $this->view->render('home');
     }
 }
