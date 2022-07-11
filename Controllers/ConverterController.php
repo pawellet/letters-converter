@@ -47,6 +47,16 @@ class ConverterController
     }
     private function showAction(): void
     {
-        $this->view->render('show');
+        $phrase = '';
+
+        if ($this->request->hasPost()) {
+            $phrase = $this->request->postParam()['phrase'];
+
+            $numbers = $this->converterModel->convertPhrase($phrase);
+
+            $this->view->render('show', $numbers);
+        } else {
+            $this->view->render('show');
+        }
     }
 }

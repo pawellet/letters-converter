@@ -21,4 +21,12 @@ class Request
     {
         return $this->get;
     }
+    public function postParam(): ?array
+    {
+        return $this->post;
+    }
+    public function hasPost(): bool
+    {
+        return !empty($this->post) ? true : false;
+    }
 }

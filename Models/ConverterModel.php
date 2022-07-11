@@ -6,4 +6,8 @@ namespace App\Model;
 
 class ConverterModel
 {
+    public function convertPhrase($phrase)
+    {
+        return 1;
+    }
 }
