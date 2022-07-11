@@ -37,10 +37,16 @@ class ConverterController
     }
     private function action(): string
     {
-        return $action = $this->request->getParam() ? $this->request->getParam() : self::DEFAULT_ACTION;
+        return $action = !empty($this->request->getParam()['action'])
+            ? $this->request->getParam()['action']
+            : self::DEFAULT_ACTION;
     }
     private function homeAction(): void
     {
         $this->view->render('home');
+    }
+    private function showAction(): void
+    {
+        $this->view->render('show');
     }
 }

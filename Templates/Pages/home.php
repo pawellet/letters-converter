@@ -1,5 +1,5 @@
 <div class="form__container">
-    <form class="form__converter" action="">
+    <form class="form__converter" method="post" action="/?action=show">
         <label for="phrase">Wpisz tekst:</label>
         <input id="phrase" name="phrase" type="text">
         <input type="submit" value="Konwertuj">
