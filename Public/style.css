@@ -30,7 +30,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 50px 50px 50px;
-    row-gap: 10px;
+    row-gap: 20px;
     align-content: center;
     background-color: transparent;
     width: 90%;
@@ -91,7 +91,6 @@
 }
 
 .show__result {
-    height: 30%;
     align-items: center;
 }
 
@@ -101,14 +100,21 @@
 
 .show__link {
     height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.show__link>a {
+    padding: 10px 0;
 }
 
 .show__link button {
-    padding: 5px 10px;
     font-size: 20px;
     background-color: rgb(176, 173, 173);
-    cursor: pointer;
     transition: .3s;
+    padding: 5px 10px;
+    cursor: pointer;
+
 }
 
 .show__link button:hover {
@@ -157,7 +163,7 @@
     }
 }
 
-@media(min-width:1000px) {
+@media(min-width:1000px) or (orientation:landscape) {
     .form__container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
