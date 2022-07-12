@@ -92,13 +92,30 @@
 
 .show__result {
     height: 30%;
-    margin-bottom: 20px;
-    display: flex;
     align-items: center;
 }
 
 .show__message {
-    height: 60%;
+    height: 50%;
+}
+
+.show__link {
+    height: 10%;
+}
+
+.show__link button {
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: rgb(176, 173, 173);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.show__link button:hover {
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: rgb(18, 68, 170);
+    color: white;
 }
 
 .show__result>h2 {

@@ -6,7 +6,12 @@
     </div>
     <div class="show__message">
         <p>
-
+            <?php echo $numbers ?>
         </p>
+    </div>
+    <div class="show__link">
+        <a href="/">
+            <button> &#8592; powrót do strony głównej</button>
+        </a>
     </div>
 </div>
